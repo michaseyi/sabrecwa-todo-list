@@ -21,6 +21,6 @@ describe("Task Component", () => {
 				<Task />
 			</TaskContextProvider>
 		)
-		expect(screen.getByText("Test Task")).toBeinTheDocument()
+		expect(screen.getByText("Test Task")).toBeInTheDocument()
 	})
 })
