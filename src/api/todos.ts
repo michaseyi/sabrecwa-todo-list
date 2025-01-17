@@ -64,4 +64,13 @@ export const todos = {
 			}, 300)
 		})
 	},
+
+	empty: async () => {
+		return new Promise((res) => {
+			setTimeout(() => {
+				localStorage.removeItem("tasks")
+				res(void 0)
+			}, 300)
+		})
+	},
 }
