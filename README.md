@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Simple Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Todo List application designed to help users manage their tasks efficiently and effectively. The application allows users to add, edit, and delete tasks, set deadlines, add comments and tag tasks for better organization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Create and Manage Tasks**: Easily add new tasks and manage existing ones.
+- **Set Deadlines**: Assign deadlines to tasks to keep track of due dates.
+- **Add Comments**: Enhance tasks with comments for better context.
+- **Tag Tasks**: Use tags to categorize and organize tasks.
+- **Mark Tasks as Completed**: Keep track of completed tasks.
 
-## Expanding the ESLint configuration
+## Technical Details
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: Built with React and TypeScript.
+- **State Management**: Uses React Context and custom hooks for state management.
+- **API**: Mock implementation of a REST API using local storage to store and retrieve tasks.
+- **Styling**: Styled with Tailwind CSS for a modern and responsive design.
+- **Routing**: Utilizes React Router for navigation.
+- **Testing**: Includes unit tests using Jest and React Testing Library.
 
-- Configure the top-level `parserOptions` property like this:
+## Live Demo
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+![Desktop Preview](/preview/desktop.png)
+A live demo of the application can be found [here](https://sabrecwa-todo-list.vercel.app/).
